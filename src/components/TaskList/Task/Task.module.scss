@@ -1,0 +1,85 @@
+.task {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 9px 15px 0 rgba(170, 170, 170, 0.3);
+    padding: 20px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    opacity: 1;
+    &:hover {
+        transform: translateY(-3px);
+    }
+    &.beforeDel {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    &__title {
+        color: rgb(53, 52, 52);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        flex-direction: row;
+        h3 {
+            margin-bottom: 0;
+            &.check {
+                color: green;
+                text-decoration: line-through;
+            }
+        }
+    }
+    &__check {
+        width: 25px;
+        height: 25px;
+        border: 1px solid rgb(63, 63, 63);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        padding: 5px;
+        svg {
+            font-size: 16px;
+            path {
+                fill: green;
+            }
+        }
+    }
+    &__buttons {
+        button {
+            width: 40px;
+            height: 40px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            outline: none;
+            background-color: transparent;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px 0 rgba(170, 170, 170, 0.3);
+            border: none;
+            &.removeBtn {
+                svg {
+                    path {
+                        transition: all .4s ease-in-out;
+                        fill: red;
+                    }
+                }
+                &:hover {
+                    svg {
+                        path {
+                            fill: rgb(112, 13, 13);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
