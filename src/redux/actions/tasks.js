@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const fetchTasks = () => {
     return async dispatch => {
-        await axios.get(`http://localhost:5001/tasks`)
+        await axios.get(`/tasks`)
             .then(({ data }) => {
                 dispatch(setTask(data));
             })
@@ -12,7 +12,7 @@ export const fetchTasks = () => {
 
 export const postTasks = (task) => {
     return async dispatch => {
-        let { data } = await axios.post(`http://localhost:5001/tasks`, task);
+        let { data } = await axios.post(`/tasks`, task);
         dispatch(addTask(data));
     }
 }
@@ -24,7 +24,7 @@ export const setDone = (id, title, check) => {
             title: title,
             check: !check
         }
-        await axios.put(`http://localhost:5001/tasks/${id}`, newTask).then(({data}) => {
+        await axios.put(`/tasks/${id}`, newTask).then(({data}) => {
             dispatch(setCheck(id));
         })
     }
@@ -32,7 +32,7 @@ export const setDone = (id, title, check) => {
 
 export const deleteTask = (id) => {
     return async dispatch => {
-        axios.delete(`http://localhost:5001/tasks/${id}`).then(({ data }) => {
+        axios.delete(`/tasks/${id}`).then(({ data }) => {
             dispatch(removeTask(id));
         });
     }
