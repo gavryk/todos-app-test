@@ -6,18 +6,23 @@
       "check": true
     },
     {
-      "id": "d05hbwy9a",
-      "title": "Something check",
+      "id": "7rjfl0sw0",
+      "title": "Create Local Server",
       "check": true
     },
     {
-      "id": "62s2al5u5",
-      "title": "push to git",
+      "id": "c98v2p1ig",
+      "title": "Push To GitHub",
       "check": true
     },
     {
-      "id": "ayrmoslsg",
-      "title": "go to sleep",
+      "id": "nkjhw5l2j",
+      "title": "Check one more time",
+      "check": true
+    },
+    {
+      "id": "8k6cmodcs",
+      "title": "Finish",
       "check": true
     }
   ]
