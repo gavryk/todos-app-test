@@ -3,8 +3,10 @@ import { useDispatch } from "react-redux";
 import { Header, InputTxt, TaskList } from './components';
 import { fetchTasks, postTasks } from "./redux/actions/tasks";
 
+
 const App = () => {
   const dispatch = useDispatch();
+  
   
   useEffect(() => {
     dispatch(fetchTasks());
